@@ -1,0 +1,14 @@
+options:
+	bot: Counting
+	staffRole: 475337675461754895
+	mutedRole: 475337676317261857
+	logGuild: 475328670693589002
+	administratorRole: 475337677881999364
+
+# Login to Counting
+on skript load:
+	load yaml "plugins/Skript/scripts/config.yml" as "config"
+	set {_token} to yaml value "token" from "config"
+	login to {_token} with the name "{@bot}"
+	wait 5 seconds
+
